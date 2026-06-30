@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Segurança - Detector de Phishing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>🛡️ Guia de Segurança Web: Sinais de Golpe</h1>
+        <p class="subtitle">Analise mensagens recebidas e aprenda a identificar riscos antes de clicar.</p>
+
+        <section class="alert-box">
+            <h2>🚨 Principais Sinais de Alerta (Fique de Olho!)</h2>
+            <ul>
+                <li>
+                    <strong>1. Links Suspeitos e Domínios Falsos:</strong> 
+                    O texto do link diz uma coisa, mas o endereço real (URL) é estranho, cheio de números ou usa domínios errados (ex: <code>banco-seguro-atualizar.net</code> em vez de <code>banco.com.br</code>).
+                </li>
+                <li>
+                    <strong>2. Senso de Urgência Extrema:</strong> 
+                    Mensagens que usam termos como "URGENTE", "Sua conta será bloqueada em 2 horas" ou "Você ganhou um prêmio, clique agora". Golpistas usam a pressa para evitar que você pense.
+                </li>
+            </ul>
+        </section>
+
+        <section class="simulator">
+            <h2>🔍 Simulador de Análise de Mensagem</h2>
+            <p>Escolha um exemplo abaixo para analisar o risco do código:</p>
+            
+            <div class="msg-examples">
+                <button onclick="analisarMensagem('urgente')">Mensagem 1: Banco</button>
+                <button onclick="analisarMensagem('promocao')">Mensagem 2: Sorteio</button>
+                <button onclick="analisarMensagem('segura')">Mensagem 3: Amigo</button>
+            </div>
+
+            <div id="resultado" class="result-box hidden">
+                <h3>Resultado da Análise:</h3>
+                <p id="resultado-texto"></p>
+                <div id="status-badge" class="badge"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
